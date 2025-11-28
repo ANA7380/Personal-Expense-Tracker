@@ -15,3 +15,16 @@ CREATE TABLE transactions (
     type ENUM('INCOME', 'EXPENSE') NOT NULL  -- 类型：收入或支出
 );
 ```
+
+## 运行已打包程序
+
+项目根目录包含以下内容：
+
+- `javafx-sdk`：已经嵌入的 JavaFX SDK（来自 `D:\javafx-sdk-21.0.9`）。
+- `run-expense-manager.bat`：用于启动程序的脚本，会自动把 `javafx-sdk\lib` 加入模块路径。
+
+```powershell
+.\run-expense-manager.bat
+```
+
+无需安装 JavaFX 的用户即可使用。如果需要更新 JavaFX 版本，只需用新的 SDK 覆盖 `dist\javafx-sdk` 并重新分发。
